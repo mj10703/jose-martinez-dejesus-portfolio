@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose A. Martinez-De Jesus | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Jose A. Martinez-De Jesus</h1>
+    <p>Student Portfolio &ndash; Software Systems 152-110-100</p>
+  </header>
+
+  <main>
+    <!-- About Me -->
+    <div class="card" id="about">
+      <h2>About Me</h2>
+      <img src="images/profile.svg" alt="Profile picture placeholder" class="profile-pic">
+      <p>
+        Hi! I'm a student in Software Systems.<br>
+        This website is my portfolio and a place to keep my course notes.
+      </p>
+    </div>
+
+    <!-- Course Notes -->
+    <div class="card" id="notes">
+      <h2>Course Notes</h2>
+      <h3>What I've learned so far</h3>
+      <p>
+        <strong>HTML</strong> gives a page its structure.<br>
+        <strong>CSS</strong> controls how the page looks.<br>
+        <strong>JavaScript</strong> makes the page interactive.<br>
+        <strong>Git</strong> tracks changes and lets me push code to GitHub.
+      </p>
+      <h3>Helpful references</h3>
+      <p>
+        <a href="https://www.geeksforgeeks.org/html/html-cheat-sheet/" target="_blank">HTML Cheat Sheet</a><br>
+        <a href="https://www.geeksforgeeks.org/css/css-cheat-sheet-a-basic-guide-to-css/" target="_blank">CSS Cheat Sheet</a><br>
+        <a href="https://www.geeksforgeeks.org/javascript/javascript-tutorial/" target="_blank">JavaScript Tutorial</a><br>
+        <a href="https://git-scm.com/cheat-sheet" target="_blank">Git Cheat Sheet</a><br>
+        <a href="pages/notes.html">More notes</a>
+      </p>
+    </div>
+
+    <!-- Contact / interaction demo -->
+    <div class="card" id="contact">
+      <h2>Say Hello</h2>
+      <label for="name-input">Your name:</label>
+      <input type="text" id="name-input" placeholder="Enter your name">
+      <button id="greet-button" type="button">Greet me</button>
+      <p id="greeting"></p>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

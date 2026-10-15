@@ -1,0 +1,78 @@
+/* Main stylesheet for the portfolio site */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #2b2b2b;
+  background-color: #f5f3ee;
+  margin: 0;
+}
+
+header {
+  background-color: #263548;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  margin: 0;
+}
+
+header a {
+  color: #ffffff;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 24px auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #d8d4cc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #263548;
+  font-size: 26px;
+}
+
+a {
+  color: #3a6ea5;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+}
+
+button {
+  font-size: 16px;
+  height: 38px;
+  padding: 0 16px;
+  color: #ffffff;
+  background-color: #5b8c6a;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4a7558;
+}
