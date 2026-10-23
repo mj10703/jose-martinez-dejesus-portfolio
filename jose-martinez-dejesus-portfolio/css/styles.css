@@ -1,0 +1,278 @@
+/* Main stylesheet for the portfolio site */
+
+/* ---------- Colors (light theme is the default) ---------- */
+:root {
+  --bg: #f5f3ee;
+  --card: #ffffff;
+  --border: #d8d4cc;
+  --text: #2b2b2b;
+  --muted: #5d5d5d;
+  --navy: #263548;
+  --heading: #263548;
+  --link: #2d5f96;
+  --accent: #4a7558;
+  --accent-hover: #3b5f47;
+  --tag-bg: #e6edf5;
+}
+
+/* Dark theme: the toggle button sets data-theme="dark" on <html> */
+:root[data-theme="dark"] {
+  --bg: #161c24;
+  --card: #1f2833;
+  --border: #33414f;
+  --text: #e8e6e1;
+  --muted: #a9b2bc;
+  --navy: #0f141a;
+  --heading: #9cc3ee;
+  --link: #8fbbe8;
+  --accent: #5b8c6a;
+  --accent-hover: #6ea17d;
+  --tag-bg: #2a3646;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  margin: 0;
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+  background-color: var(--navy);
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px 12px;
+}
+
+header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  margin: 0;
+}
+
+header p {
+  margin: 4px 0 12px;
+  color: #d5dbe3;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 8px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* The link for the page you are on */
+nav a[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+}
+
+/* ---------- Layout ---------- */
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 24px auto;
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--heading);
+  font-size: 26px;
+  margin-top: 0;
+}
+
+h3 {
+  color: var(--heading);
+  margin-bottom: 4px;
+}
+
+a {
+  color: var(--link);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 8px 16px 32px;
+  font-size: 14px;
+}
+
+/* ---------- Home page ---------- */
+.about {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skill-list li,
+.tag {
+  background-color: var(--tag-bg);
+  color: var(--heading);
+  border-radius: 14px;
+  padding: 3px 12px;
+  font-size: 14px;
+}
+
+/* ---------- Forms and buttons ---------- */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px;
+  color: var(--text);
+  background-color: var(--card);
+  border: 1px solid #999999;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+button {
+  font-size: 16px;
+  min-height: 38px;
+  padding: 0 16px;
+  color: #ffffff;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid #e0a82e;
+  outline-offset: 2px;
+}
+
+#theme-button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+}
+
+#theme-button:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+#greeting {
+  font-weight: bold;
+  min-height: 1.6em;
+}
+
+/* ---------- Notes page ---------- */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.filter-buttons button {
+  color: var(--heading);
+  background-color: var(--tag-bg);
+  border: 1px solid var(--border);
+}
+
+.filter-buttons button:hover {
+  background-color: var(--border);
+}
+
+/* The topic button that is currently selected */
+.filter-buttons button.active {
+  color: #ffffff;
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+#note-count {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.note {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.note h3 {
+  margin-top: 0;
+}
+
+.note p {
+  margin: 4px 0;
+}
+
+code {
+  background-color: var(--tag-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 30px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
