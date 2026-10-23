@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student portfolio and course notes for Software Systems 152-110-100.">
   <title>Jose A. Martinez-De Jesus | Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -10,48 +11,80 @@
   <header>
     <h1>Jose A. Martinez-De Jesus</h1>
     <p>Student Portfolio &ndash; Software Systems 152-110-100</p>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="pages/notes.html">Course Notes</a>
+      <a href="pages/projects.html">Projects</a>
+    </nav>
+    <button id="theme-button" type="button">Dark mode</button>
   </header>
 
   <main>
     <!-- About Me -->
-    <div class="card" id="about">
+    <section class="card" id="about">
       <h2>About Me</h2>
-      <img src="images/profile.svg" alt="Profile picture placeholder" class="profile-pic">
-      <p>
-        Hi! I'm a student in Software Systems.<br>
-        This website is my portfolio and a place to keep my course notes.
-      </p>
-    </div>
+      <div class="about">
+        <img src="images/profile.svg" alt="Profile picture placeholder" class="profile-pic">
+        <div>
+          <p>
+            Hi! I'm a student in Software Systems.
+            This website is my portfolio and a place to keep my course notes.
+          </p>
+          <p>
+            I built it with HTML, CSS, and JavaScript and manage it with Git and GitHub.
+            Every checkpoint in the course added something new to it.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Course Notes -->
-    <div class="card" id="notes">
-      <h2>Course Notes</h2>
-      <h3>What I've learned so far</h3>
+    <!-- What the site contains -->
+    <section class="card" id="explore">
+      <h2>Explore the Site</h2>
       <p>
-        <strong>HTML</strong> gives a page its structure.<br>
-        <strong>CSS</strong> controls how the page looks.<br>
-        <strong>JavaScript</strong> makes the page interactive.<br>
-        <strong>Git</strong> tracks changes and lets me push code to GitHub.
+        <a href="pages/notes.html">Course Notes</a> &ndash; searchable notes on HTML, CSS, JavaScript, and Git.
       </p>
-      <h3>Helpful references</h3>
       <p>
-        <a href="https://www.geeksforgeeks.org/html/html-cheat-sheet/" target="_blank">HTML Cheat Sheet</a><br>
-        <a href="https://www.geeksforgeeks.org/css/css-cheat-sheet-a-basic-guide-to-css/" target="_blank">CSS Cheat Sheet</a><br>
-        <a href="https://www.geeksforgeeks.org/javascript/javascript-tutorial/" target="_blank">JavaScript Tutorial</a><br>
-        <a href="https://git-scm.com/cheat-sheet" target="_blank">Git Cheat Sheet</a><br>
-        <a href="pages/notes.html">More notes</a>
+        <a href="pages/projects.html">Projects</a> &ndash; the work I have built and pushed to GitHub so far.
       </p>
-    </div>
+    </section>
 
-    <!-- Contact / interaction demo -->
-    <div class="card" id="contact">
+    <!-- Skills -->
+    <section class="card" id="skills">
+      <h2>What I'm Learning</h2>
+      <ul class="skill-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git &amp; GitHub</li>
+        <li>Command line</li>
+      </ul>
+    </section>
+
+    <!-- Helpful references -->
+    <section class="card" id="references">
+      <h2>Helpful References</h2>
+      <p>
+        <a href="https://www.geeksforgeeks.org/html/html-cheat-sheet/" target="_blank" rel="noopener">HTML Cheat Sheet</a><br>
+        <a href="https://www.geeksforgeeks.org/css/css-cheat-sheet-a-basic-guide-to-css/" target="_blank" rel="noopener">CSS Cheat Sheet</a><br>
+        <a href="https://www.geeksforgeeks.org/javascript/javascript-tutorial/" target="_blank" rel="noopener">JavaScript Tutorial</a><br>
+        <a href="https://git-scm.com/cheat-sheet" target="_blank" rel="noopener">Git Cheat Sheet</a>
+      </p>
+    </section>
+
+    <!-- Interaction demo -->
+    <section class="card" id="contact">
       <h2>Say Hello</h2>
       <label for="name-input">Your name:</label>
       <input type="text" id="name-input" placeholder="Enter your name">
       <button id="greet-button" type="button">Greet me</button>
-      <p id="greeting"></p>
-    </div>
+      <p id="greeting" aria-live="polite"></p>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Jose A. Martinez-De Jesus &middot; Software Systems 152-110-100</p>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
